@@ -1,0 +1,36 @@
+<ion-view view-title="Dashboard" hide-nav-bar="true">
+  <ion-content class="padding scanner-view">
+
+
+    <button class="button button-icon icon ion-qr-scanner" ng-click="scanBarcode()"></button>
+
+    <ion-list ng-if="codeFound">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+
+        <h2>ID : {{code.id}}</h2>
+
+        <p>Référence : {{code.ref}}</p>
+
+        <p>Responsable : {{code.owner}}</p>
+
+      </ion-item>
+    </ion-list>
+
+    <div class="form-errors" ng-if="scannerClick && !codeFound">
+
+      <ion-list>
+
+        <strong class="error"> Le produit n'existe pas! </strong>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+
+          <h2>TEXT : {{code.text}}</h2>
+
+          <p>Format : {{code.format}}</p>
+
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+  </ion-content>
+</ion-view>

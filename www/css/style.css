@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+.scanner-view {
+  text-align: center;
+  padding: 170px 0 50px 0;
+}
+
+.scanner-view .ion-qr-scanner {
+  color: #387ef5;
+  min-height: 140px;
+}
+
+.scanner-view .ion-qr-scanner.icon:before {
+  font-size: 120px;
+}
