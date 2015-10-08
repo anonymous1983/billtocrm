@@ -2,11 +2,8 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate" ng-repeat="code in codes" type="item-text-wrap" href="">
-        <h2>ID : {{code.id}}</h2>
 
-        <p>Référence : {{code.ref}}</p>
-
-        <p>Responsable : {{code.owner}}</p>
+        {{ code | json}}
 
         <ion-option-button class="button-assertive">
           Delete
